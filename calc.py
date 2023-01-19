@@ -2,9 +2,17 @@
 # Author: Prince Oppong Boamah<regioths@gmail.com>
 # Date: 19th January 2023
 
-discount = 0.20
+first_number = float(input("Enter first number: "))
+second_number = float(input("Enter second number: "))
+operand = input("Choose one of these (+ - * /): ")
 
-unit_price = int(input("Enter the unit price of the product: "))
-discounted_price = unit_price * discount 
-total_price = unit_price - discounted_price
-print(f"Total price is : {total_price}")
+if operand == "+":
+  print(first_number + second_number)
+elif operand == "-":
+  print(first_number - second_number)
+elif operand == "*":
+  print(first_number * second_number)
+elif operand == "/":
+  print(first_number / second_number)
+else:
+  print("Wrong operand choice!")
