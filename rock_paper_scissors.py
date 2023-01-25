@@ -4,34 +4,34 @@
 
 import random
 
-item_list = ["rock", "paper", "scissors"]
-choice = input("Type in one of these choices (rock, paper, scissors): ")
-rand_choice = random.choice(item_list)
+item_list = {1: "rock", 2: "paper", 3: "scissors"}
+choice = int(input("Type in one of these choices (1:rock, 2:paper, 3:scissors): "))
+random_choice = random.choice(list(item_list.values()))
 
-print(f"CPU selection: {rand_choice}")
+print(f"CPU selection: {random_choice}")
 
-if choice == "rock":
-    if rand_choice == "rock":
+if item_list[choice] == "rock":
+    if random_choice == "rock":
         print("Draw!")
-    elif rand_choice == "paper":
+    elif random_choice == "paper":
         print("You Lose!")
-    elif rand_choice == "scissors":
+    elif random_choice == "scissors":
         print("You Win!")
 
-elif choice == "paper":
-    if rand_choice == "rock":
+elif item_list[choice] == "paper":
+    if random_choice == "rock":
         print("You Win!")
-    elif rand_choice == "paper":
+    elif random_choice == "paper":
         print("Draw!")
-    elif rand_choice == "scissors":
+    elif random_choice == "scissors":
         print("You Lose!")
 
-elif choice == "scissors":
-    if rand_choice == "rock":
+elif item_list[choice] == "scissors":
+    if random_choice == "rock":
         print("You Lose!")
-    elif rand_choice == "paper":
+    elif random_choice == "paper":
         print("You Win!")
-    elif rand_choice == "scissors":
+    elif random_choice == "scissors":
         print("Draw!")
 else:
     print("You made the wrong choice! Game Over!!")
