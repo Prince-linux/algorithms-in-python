@@ -1,8 +1,21 @@
-TAX = 0.10 
-customer_name = input("Please Enter Customer's name: ")
-customer_bill = float(input("Enter Customer's bill: "))
-total_tax = customer_bill * TAX 
-total_bill = format(customer_bill + total_tax, '.2f') 
-print(f"Customer: {customer_name}\nBill: {customer_bill}\nTax: {total_tax}\nTotal: {total_bill}")
+# A bill calculator where a 10% ddiscount is applied.
+
+# Author: Prince Oppong Boamah<regioths@gmail.com>
+# Date: 1st February, 2023.
+
+def calculate_discount(total):
+    discount = total - total / 100 * 10
+    return discount
+
+def get_total():
+    bill = int(input("Enter total: "))
+    bill_total = format(calculate_discount(bill), '.2f')
+    return bill_total
+
+def main():
+    total = get_total()
+    print(f"Your bill is: ${total}")
+
+main()
 
 
